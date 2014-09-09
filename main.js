@@ -9,39 +9,39 @@ console.log("The average price is $" + truncAvgPrice + ".");
 
 
 /*priced between*/
-var pricedBetween = items.filter(function(butts) {
-  return butts.price < 18 && butts.price > 14 && butts.currency_code == "USD";
+var pricedBetween = items.filter(function(between) {
+  return between.price < 18 && between.price > 14 && between.currency_code == "USD";
 });
 console.log('Items that cost between 18 and 14 USD:', pricedBetween);
 
 
 /*Schlitz Glass*/
-items.filter(function(butts) {
-return butts.currency_code == 'GBP';
-}).forEach(function(butts) {
-  console.log(butts.title + " costs £" + butts.price + '.');
+items.filter(function(getcode) {
+return getcode.currency_code == 'GBP';
+}).forEach(function(pull) {
+  console.log(pull.title + " costs £" + pull.price + '.');
 });
 
 
 /*made of wood*/
-items.filter(function(butts) {
-  return (butts.materials.indexOf("wood") != -1);
-}).forEach(function(butts) {
-  console.log(butts.title + " is made of wood.");
+items.filter(function(getwood) {
+  return (getwood.materials.indexOf("wood") != -1);
+}).forEach(function(log) {
+  console.log(log.title + " is made of wood.");
 });
 
 
 /*eight or more materials*/
-items.filter(function(butts) {
-  return (butts.materials.length >=8);
-}).forEach(function(butts){
-  console.log(butts.title + butts.materials)
+items.filter(function(eightmore) {
+  return (eightmore.materials.length >=8);
+}).forEach(function(log){
+  console.log(log.title + log.materials);
 });
 
 /*made by sellers*/
-var madeBySeller = items.map(function(butts) {
-  return ((butts.who_made) === "i_did");
-}).filter(function(butts) {
-  return butts === true;
+var madeBySeller = items.map(function(madeby) {
+  return ((madeby.who_made) === "i_did");
+}).filter(function(choose) {
+  return choose === true;
 }).length;
 console.log(madeBySeller + " were made by their sellers.");
